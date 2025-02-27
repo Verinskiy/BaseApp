@@ -1,11 +1,10 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.ksp)
 }
 
 android {
-    namespace = "com.verinskij.newsdatabase"
+    namespace = "com.verinskij.news.main"
     compileSdk = 35
 
     defaultConfig {
@@ -41,7 +40,4 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-
-    implementation(libs.androidx.room)
-    implementation(libs.androidx.room.compiler)
 }

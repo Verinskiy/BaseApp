@@ -3,7 +3,7 @@ package com.verinskij.newsapi
 import androidx.annotation.IntRange
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import com.skydoves.retrofit.adapters.result.ResultCallAdapterFactory
-import com.verinskij.newsapi.models.Article
+import com.verinskij.newsapi.models.ArticleDTO
 import com.verinskij.newsapi.models.Language
 import com.verinskij.newsapi.models.Response
 import com.verinskij.newsapi.models.SortBy
@@ -27,7 +27,7 @@ interface NewsApi {
         @Query("sortBy") sortBy: SortBy? = null,
         @Query("pageSize") @IntRange(from = 0, to = 100) pageSize: Int = 100,
         @Query("page") @IntRange(from = 1) page: Int = 1,
-    ): Result<Response<List<Article>>>
+    ): Result<Response<List<ArticleDTO>>>
 }
 
 fun NewsApi(

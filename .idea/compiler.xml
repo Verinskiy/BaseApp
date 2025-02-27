@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="11">
-      <module name="BaseApp.newsdatabase" target="21" />
+      <module name="BaseApp.news-main" target="21" />
     </bytecodeTargetLevel>
   </component>
 </project>
