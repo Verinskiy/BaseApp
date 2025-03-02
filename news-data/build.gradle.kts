@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.verinskij.news.main"
+    namespace = "com.verinskij.news.data"
     compileSdk = 35
 
     defaultConfig {
@@ -35,16 +35,8 @@ android {
 dependencies {
 
     implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.androidx.activity.compose)
-    implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.ui)
-    implementation(libs.androidx.ui.graphics)
-    implementation(libs.androidx.ui.tooling.preview)
-    implementation(libs.androidx.material3)
-    implementation(libs.viewmodel)
-    implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.kotlinx.coroutines.android)
-    implementation(project(":news-data"))
 
+    implementation(project(":newsdatabase"))
+    implementation(project(":newsapi"))
 }
