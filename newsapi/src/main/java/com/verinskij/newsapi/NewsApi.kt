@@ -5,7 +5,7 @@ import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFact
 import com.skydoves.retrofit.adapters.result.ResultCallAdapterFactory
 import com.verinskij.newsapi.models.ArticleDTO
 import com.verinskij.newsapi.models.Language
-import com.verinskij.newsapi.models.Response
+import com.verinskij.newsapi.models.ResponseDTO
 import com.verinskij.newsapi.models.SortBy
 import com.verinskij.newsapi.utils.NewsApiKeyInterceptor
 import kotlinx.serialization.json.Json
@@ -27,7 +27,7 @@ interface NewsApi {
         @Query("sortBy") sortBy: SortBy? = null,
         @Query("pageSize") @IntRange(from = 0, to = 100) pageSize: Int = 100,
         @Query("page") @IntRange(from = 1) page: Int = 1,
-    ): Result<Response<ArticleDTO>>
+    ): Result<ResponseDTO<ArticleDTO>>
 }
 
 fun NewsApi(

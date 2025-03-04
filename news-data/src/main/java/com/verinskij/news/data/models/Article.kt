@@ -1,3 +1,5 @@
+package com.verinskij.news.data.models
+
 import java.util.Date
 
 data class Article(
